@@ -1,8 +1,8 @@
 {
   "name": "react-minimalist-portal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A minimalist portal for react",
-  "main": "index.js",
+  "main": "lib/portal.js",
   "scripts": {
     "build": "babel src --out-dir lib",
     "lint": "eslint src",
