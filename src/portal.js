@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDom from 'react-dom';
 
-class Portal extends React.Component {
+class Portal extends Component {
   componentWillMount() {
     this.popup = document.createElement('div');
     document.body.appendChild(this.popup);
