@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { assert } from 'chai';
-import Portal from '../src/portal';
+import Portal from '../lib/portal';
 
 describe('Portal', () => {
   it('should not be in current react three', () => {

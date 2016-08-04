@@ -11,6 +11,10 @@ node_modules
 
 # Build
 lib
+lib-test
 
 # Webstorm
 .idea
+
+# Coverage
+coverage

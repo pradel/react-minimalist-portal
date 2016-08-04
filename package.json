@@ -5,9 +5,12 @@
   "main": "lib/portal.js",
   "scripts": {
     "build": "babel src --out-dir lib",
+    "build:test": "babel test --out-dir lib-test",
     "lint": "eslint src",
     "test": "npm run lint && npm run build && npm run test:src",
+    "test-travis": "npm run build && npm run build:test && npm run lint && npm run test-travis:src",
     "test:src": "mocha --compilers js:babel-core/register --require ./test/setup.js ./test/portal.js",
+    "test-travis:src": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec ./lib-test",
     "publish-please": "publish-please",
     "prepublish": "publish-please guard"
   },
@@ -37,6 +40,7 @@
     "eslint-plugin-import": "^1.12.0",
     "eslint-plugin-jsx-a11y": "^2.0.1",
     "eslint-plugin-react": "^6.0.0",
+    "istanbul": "^0.4.4",
     "jsdom": "^9.4.1",
     "mocha": "^3.0.1",
     "publish-please": "^2.1.4",
