@@ -8,7 +8,7 @@ Create a new React tree in document.body to create modal etc ..
 [![devDependency Status](https://david-dm.org/pradel/react-minimalist-portal/dev-status.svg)](https://david-dm.org/pradel/react-minimalist-portal#info=devDependencies)
 
 ## Usage
-```
+```javascript
 import React from 'react';
 import Portal from 'react-minimalist-portal';
 
