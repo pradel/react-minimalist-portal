@@ -1,4 +1,6 @@
 # react-minimalist-portal
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/pradel/react-minimalist-portal.svg)](https://greenkeeper.io/)
 A minimalist portal for react.
 Create a new React tree in document.body to create modal etc ..
 
