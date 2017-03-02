@@ -27,7 +27,7 @@ class Portal extends Component {
 }
 
 Portal.propTypes = {
-  children: React.PropTypes.node,
+  children: React.PropTypes.node, // eslint-disable-line
 };
 
 export default Portal;
