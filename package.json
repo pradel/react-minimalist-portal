@@ -9,9 +9,7 @@
     "test": "npm run lint && npm run build && npm run test:src",
     "test-travis": "npm run lint && npm run build && npm run test-travis:src",
     "test:src": "mocha --compilers js:babel-core/register --require ./test/setup.js ./test/portal.js",
-    "test-travis:src": "./node_modules/.bin/babel-node ./node_modules/.bin/babel-istanbul cover ./node_modules/.bin/_mocha -- --require ./test/setup.js ./test/portal.js",
-    "publish-please": "publish-please",
-    "prepublish": "publish-please guard"
+    "test-travis:src": "./node_modules/.bin/babel-node ./node_modules/.bin/babel-istanbul cover ./node_modules/.bin/_mocha -- --require ./test/setup.js ./test/portal.js"
   },
   "keywords": [
     "react",
@@ -44,7 +42,6 @@
     "istanbul": "^0.4.4",
     "jsdom": "^9.4.1",
     "mocha": "^3.0.1",
-    "publish-please": "^2.1.4",
     "react": "^15.3.0",
     "react-addons-test-utils": "^15.3.0",
     "react-dom": "^15.3.0"
