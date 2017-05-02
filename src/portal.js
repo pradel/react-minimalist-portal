@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
+import PropTypes from 'prop-types';
 import ReactDom from 'react-dom';
 
 class Portal extends Component {
@@ -27,7 +28,7 @@ class Portal extends Component {
 }
 
 Portal.propTypes = {
-  children: React.PropTypes.node, // eslint-disable-line
+  children: PropTypes.node, // eslint-disable-line
 };
 
 export default Portal;
