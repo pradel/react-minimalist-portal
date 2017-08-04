@@ -1,6 +1,6 @@
 {
   "name": "react-minimalist-portal",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "A minimalist portal for react",
   "main": "lib/portal.js",
   "scripts": {
