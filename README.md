@@ -10,9 +10,7 @@ This package is compatible with react 15 and 16.
 [![Coverage Status](https://coveralls.io/repos/github/pradel/react-minimalist-portal/badge.svg?branch=master)](https://coveralls.io/github/pradel/react-minimalist-portal?branch=master)
 [![devDependency Status](https://david-dm.org/pradel/react-minimalist-portal/dev-status.svg)](https://david-dm.org/pradel/react-minimalist-portal#info=devDependencies)
 
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/TPcxj3ZMAXdSxzhvJ7SzjaQY/pradel/react-minimalist-portal'>
-  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/TPcxj3ZMAXdSxzhvJ7SzjaQY/pradel/react-minimalist-portal.svg' />
-</a>
+
 
 ## Usage
 ```javascript
