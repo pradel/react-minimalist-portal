@@ -6,9 +6,11 @@ const useCreatePortal = typeof ReactDom.createPortal === 'function';
 
 class Portal extends Component {
   componentWillMount() {
-    this.popup = document.createElement('div');
-    document.body.appendChild(this.popup);
-    this.renderLayer();
+    if (typeof window !== 'undefined') {
+      this.popup = document.createElement('div');
+      document.body.appendChild(this.popup);
+      this.renderLayer();
+    }
   }
 
   componentDidUpdate() {
