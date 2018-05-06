@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import ReactDom from 'react-dom';
 
 const useCreatePortal = typeof ReactDom.createPortal === 'function';
+const isBrowser = typeof window !== 'undefined';
 
 class Portal extends Component {
   componentWillMount() {
-    if (typeof window !== 'undefined') {
+    if (isBrowser) {
       this.popup = document.createElement('div');
       document.body.appendChild(this.popup);
       this.renderLayer();
