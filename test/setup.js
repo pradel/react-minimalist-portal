@@ -1,4 +1,8 @@
+import { configure, mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import jsdomLib from 'jsdom';
+
+configure({ adapter: new Adapter() });
 
 const jsdom = jsdomLib.jsdom;
 const exposedProperties = ['window', 'navigator', 'document'];
