@@ -35,4 +35,13 @@ describe('Portal', () => {
     wrapper.unmount();
     assert.notMatch(document.documentElement.innerHTML, /Hello/);
   });
+
+  it('should use the container prop to render the content', () => {
+    const container = document.createElement('a');
+    document.body.appendChild(container);
+    const element = <p>Hello</p>;
+    const wrapper = mount(<Portal container={container}>{element}</Portal>);
+    assert.match(document.documentElement.innerHTML, /<a><p>Hello<\/p><\/a>/);
+    wrapper.unmount();
+  });
 });

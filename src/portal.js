@@ -8,8 +8,12 @@ const isBrowser = typeof window !== 'undefined';
 class Portal extends Component {
   componentWillMount() {
     if (isBrowser) {
-      this.popup = document.createElement('div');
-      document.body.appendChild(this.popup);
+      if (!this.props.container) {
+        this.container = document.createElement('div');
+        document.body.appendChild(this.container);
+      } else {
+        this.container = this.props.container;
+      }
       this.renderLayer();
     }
   }
@@ -20,20 +24,22 @@ class Portal extends Component {
 
   componentWillUnmount() {
     if (!useCreatePortal) {
-      ReactDom.unmountComponentAtNode(this.popup);
+      ReactDom.unmountComponentAtNode(this.container);
     }
-    document.body.removeChild(this.popup);
+    if (!this.props.container) {
+      document.body.removeChild(this.container);
+    }
   }
 
   renderLayer() {
     if (!useCreatePortal) {
-      ReactDom.unstable_renderSubtreeIntoContainer(this, this.props.children, this.popup);
+      ReactDom.unstable_renderSubtreeIntoContainer(this, this.props.children, this.container);
     }
   }
 
   render() {
     if (useCreatePortal) {
-      return ReactDom.createPortal(this.props.children, this.popup);
+      return ReactDom.createPortal(this.props.children, this.container);
     }
     return null;
   }
@@ -41,6 +47,7 @@ class Portal extends Component {
 
 Portal.propTypes = {
   children: PropTypes.node, // eslint-disable-line
+  container: PropTypes.instanceOf(Element), // eslint-disable-line
 };
 
 export default Portal;
