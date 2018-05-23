@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { Component, Element } from 'react';
 import PropTypes from 'prop-types';
 import ReactDom from 'react-dom';
 
