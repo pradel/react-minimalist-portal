@@ -33,7 +33,7 @@ export default class App extends React.Component {
   render() {
     return (
       <Portal container={container}>
-        <p>I am in document body.</p>
+        <p>I am in my-custom-container-id.</p>
       </Portal>
     );
   }
