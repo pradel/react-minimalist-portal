@@ -8,11 +8,9 @@ This package is compatible with react 15 and 16.
 [![npm](https://img.shields.io/npm/dm/react-minimalist-portal.svg)](https://www.npmjs.com/package/react-minimalist-portal)
 [![Build Status](https://travis-ci.org/pradel/react-minimalist-portal.svg?branch=master)](https://travis-ci.org/pradel/react-minimalist-portal)
 [![Coverage Status](https://coveralls.io/repos/github/pradel/react-minimalist-portal/badge.svg?branch=master)](https://coveralls.io/github/pradel/react-minimalist-portal?branch=master)
-[![devDependency Status](https://david-dm.org/pradel/react-minimalist-portal/dev-status.svg)](https://david-dm.org/pradel/react-minimalist-portal#info=devDependencies)
-
-
 
 ## Usage
+
 ```javascript
 import React from 'react';
 import Portal from 'react-minimalist-portal';
@@ -26,4 +24,21 @@ export default class App extends React.Component {
     );
   }
 }
+
+// If you want to render the portal inside your own container
+const container = document.getElementById('my-custom-container-id');
+
+export default class App extends React.Component {
+  render() {
+    return (
+      <Portal container={container}>
+        <p>I am in my-custom-container-id.</p>
+      </Portal>
+    );
+  }
+}
 ```
+
+## Props
+
+- `container` - optional - You can specify a container prop which should be of `Element` type. The portal will be rendered inside that element. The default behavior will create a div node and render it at the at the end of `document.body`.
